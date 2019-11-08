@@ -1,6 +1,5 @@
 $(document).foundation();
 
-alert('sss');
 
 $('.welcome_ausdsdio').click(function() {
   if (this.paused == false) {

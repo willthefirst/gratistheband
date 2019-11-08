@@ -23,12 +23,13 @@ function sass() {
 };
 
 function js_vendor() {
-  console.log('here');
-  return gulp.src('js/vendor.js')
-    .pipe($.include())
-      .on('error', console.log)
-    .pipe(gulp.dest('dist/js'))
-    .pipe(browserSync.stream());
+  return gulp.src([
+    'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/what-input/dist/what-input.min.js',
+    'node_modules/foundation-sites/dist/js/foundation.min.js'])
+  .pipe($.concat('vendor.js'))
+  .pipe(gulp.dest('dist/js'))
+  .pipe(browserSync.stream());
 }
 
 
