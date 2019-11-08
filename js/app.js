@@ -1,7 +1,8 @@
 $(document).foundation();
 
+alert('sss');
 
-$('.welcome_audio').click(function() {
+$('.welcome_ausdsdio').click(function() {
   if (this.paused == false) {
       this.pause();
       alert('music paused');
